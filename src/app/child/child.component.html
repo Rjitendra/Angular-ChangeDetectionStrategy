@@ -1,0 +1,17 @@
+<div class="child">
+  <h1>Child Component- Name</h1>
+  <button (click)="refresh()">refresh</button>
+  <ol>
+    <ng-container *ngFor="let item of names">
+      <li>{{ item }}</li>
+    </ng-container>
+  </ol>
+</div>
+<div class="child">
+  <h1>Child Component- Fruit</h1>
+  <ol>
+    <ng-container *ngFor="let item of fruitsArray">
+      <li>{{ item }}</li>
+    </ng-container>
+  </ol>
+</div>

@@ -1,0 +1,24 @@
+<div class="parent">
+  <h1>Parent Component</h1>
+  <input type="text" [(ngModel)]="name" placeholder="Add Name" />
+  <button (click)="addName(name)">Add Name</button>
+  <button (click)="clearNames()">Clear Names</button>
+  <ol>
+    <ng-container *ngFor="let item of names">
+      <li>{{ item }}</li>
+    </ng-container>
+  </ol>
+
+  <input type="text" [(ngModel)]="fruit" placeholder="Add Fruit" />
+  <button (click)="addFruit(fruit)">Add Fruit</button>
+  <button (click)="clearFruits()">Clear Fruit</button>
+  <ol>
+    <ng-container *ngFor="let item of fruitsArray">
+      <li>{{ item }}</li>
+    </ng-container>
+  </ol>
+</div>
+<br>
+<div class="child">
+  <app-child [names]="names" [fruits]="fruits" [clearFruits]="clearFruitsBS"></app-child>
+</div>
